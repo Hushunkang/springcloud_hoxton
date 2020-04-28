@@ -1,2 +1,14 @@
 server:
   port: 8102
+
+spring:
+  application:
+    name: cloud-order-service
+
+eureka:
+  client:
+    register-with-eureka: true #true表示将本微服务（我/微服务的提供者）注册到eureka服务端，默认为true
+    fetch-registry: true #true表示从eureka服务端抓取已被注册的微服务，默认为true
+    #注意，单节点eureka服务端是无所谓的，eureka服务端集群必须设置为true才能配合ribbon使用负载均衡机制
+    service-url:
+      defaultZone: http://localhost:7001/eureka #将本微服务（我）注册到eureka服务端的具体地址
