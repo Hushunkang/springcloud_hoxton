@@ -11,6 +11,14 @@ spring:
     username: root
     password: 123456
 
+eureka:
+  client:
+    register-with-eureka: true #true表示将本微服务（我/微服务的提供者）注册到eureka服务端，默认为true
+    fetch-registry: true #true表示从eureka服务端抓取已被注册的微服务，默认为true
+                         #注意，单节点eureka服务端是无所谓的，eureka服务端集群必须设置为true才能配合ribbon使用负载均衡机制
+    service-url:
+      defaultZone: http://localhost:7001/eureka #将本微服务（我）注册到eureka服务端的具体地址
+
 mybatis:
   mapper-locations: classpath:mapper/*.xml #mybatis的sql映射文件所在位置
   type-aliases-package: com.atguigu.springcloud.entities #所有有别名效果Entity类的所在包
