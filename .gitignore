@@ -38,3 +38,7 @@ hs_err_pid*
 .gitignore
 /out/
 /target/
+
+/cloud-api-common/target/maven-archiver/
+/cloud-api-common/target/maven-status/
+/cloud-api-common/target/cloud-api-common-1.0-SNAPSHOT.jar
