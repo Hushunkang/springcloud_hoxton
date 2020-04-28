@@ -4,8 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.io.Serializable;
-
 /**
  * @author hskBeginner Email：2752962035@qq.com
  * @version 1.0
@@ -15,12 +13,14 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class Payment implements Serializable {
+public class CommonResult<T> {
 
-    private static final long serialVersionUID = -6831755378087556480L;
+    private Integer code;
+    private String message;
+    private T data;
 
-    private Long id;//支付信息ID
-
-    private String serial;//支付流水号
+    public CommonResult(Integer code, String message) {
+        this(code,message,null);
+    }
 
 }
