@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
  * @create 2020年04月28日
  */
 @RestController
-@RequestMapping("/Payment")
+@RequestMapping("/payment")
 @Slf4j
 public class PaymentController {
 
@@ -34,7 +34,8 @@ public class PaymentController {
     @GetMapping("getPaymentById/{id}")
     public CommonResult getPaymentById(@PathVariable Long id){
         Payment payment = paymentService.getPaymentById(id);
-        log.info("查询支付信息为：" + payment);
+        log.info("查询支付信息为：" + payment + "O(∩_∩)O哈哈~");
+        log.info("测试devTools热部署工具");
         if (payment != null) {
             return new CommonResult(200,"查询支付信息成功了(*￣︶￣)",payment);
         }
