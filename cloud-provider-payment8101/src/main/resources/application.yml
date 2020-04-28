@@ -1,0 +1,16 @@
+server:
+  port: 8101
+
+spring:
+  application:
+    name: cloud-payment-service
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource #Druid数据源、Druid数据库连接池
+    driver-class-name: org.gjt.mm.mysql.Driver #mysql的jdbc驱动的驱动类
+    url: jdbc:mysql://localhost:3306/db2020?useUnicode=true&characterEncoding-utr-8&useSSL=false
+    username: root
+    password: 123456
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml #mybatis的sql映射文件所在位置
+  type-aliases-package: com.atguigu.springcloud.entities #所有有别名效果Entity类的所在包
