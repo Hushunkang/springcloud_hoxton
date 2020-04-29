@@ -11,4 +11,5 @@ eureka:
     fetch-registry: true #true表示从eureka服务端抓取已被注册的微服务，默认为true
     #注意，单节点eureka服务端是无所谓的，eureka服务端集群必须设置为true才能配合ribbon使用负载均衡机制
     service-url:
-      defaultZone: http://localhost:7001/eureka #将本微服务（我）注册到eureka服务端的具体地址
+#      defaultZone: http://eureka7001.com:7001/eureka 将本微服务（我）注册到eureka服务端的具体地址（单节点eureka服务端）
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka #eureka服务端集群
