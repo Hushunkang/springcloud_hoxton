@@ -2,6 +2,7 @@ package com.atguigu.springcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
@@ -12,6 +13,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  */
 @SpringBootApplication
 @EnableEurekaClient//表示本微服务（我）就是要被注册到注册中心的微服务（微服务的提供者），即eureka服务端
+@EnableDiscoveryClient//服务发现，对于注册到Eureka中的微服务，可以通过服务发现来获得它的信息
 public class PaymentApplication8101 {
 
     public static void main(String[] args) {
