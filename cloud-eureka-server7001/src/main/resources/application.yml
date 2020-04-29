@@ -11,3 +11,6 @@ eureka:
     service-url:
       #与eureka服务端交互的地址查询服务和注册服务，都需要依赖这个地址
       defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  server:
+    enable-self-preservation: false #关闭eureka服务端的自我保护机制（默认为true表示eureka服务端的自我保护机制默认是开启的），即一定时间内（默认90秒）没有接收到eureka客户端发送的心跳包，立马剔除掉它
+    eviction-interval-timer-in-ms: 10000 #将默认90秒的时间间隔改成10秒

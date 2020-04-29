@@ -22,6 +22,10 @@ eureka:
   instance:
     instance-id: ${spring.cloud.client.hostname}:payment:${server.port}:${spring.application.name} #微服务实例标识（几号机、几号端口、什么微服务）
     prefer-ip-address: true #访问路径可以显示ip地址
+    #eureka客户端向eureka服务端发送心跳包的时间间隔（默认30秒）
+    lease-renewal-interval-in-seconds: 30
+    #eureka服务端收到eureka客户端最后一次发送的心跳包后等待的时间上限值，超时，立马剔除掉eureka客户端（默认90秒）
+    lease-expiration-duration-in-seconds: 30
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml #mybatis的sql映射文件所在位置
