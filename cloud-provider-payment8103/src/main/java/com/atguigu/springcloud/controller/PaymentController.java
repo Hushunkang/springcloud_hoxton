@@ -30,7 +30,7 @@ public class PaymentController {
         Integer result = paymentService.add(payment);
         log.info("插入一条支付信息后生成的自增id为：" + result);
         if (result > 0) {
-           return new CommonResult<>(200,"serverPort：" + serverPort + "生成支付信息成功了(*￣︶￣)",result);
+           return new CommonResult<>(200,"register center with eureka,serverPort:" + serverPort + "生成支付信息成功了(*￣︶￣)",result);
         }
         return new CommonResult<>(444,"完蛋，生成支付信息失败了(⊙︿⊙)");
     }
@@ -39,9 +39,8 @@ public class PaymentController {
     public CommonResult<Payment> getPaymentById(@PathVariable("id") Long id){
         Payment payment = paymentService.getPaymentById(id);
         log.info("查询支付信息为：" + payment + "O(∩_∩)O哈哈~");
-        log.info("测试devTools热部署工具");
         if (payment != null) {
-            return new CommonResult<>(200,"serverPort：" + serverPort + "查询支付信息成功了(*￣︶￣)",payment);
+            return new CommonResult<>(200,"register center with eureka,serverPort:" + serverPort + "查询支付信息成功了(*￣︶￣)",payment);
         }
         return new CommonResult<>(404,"完蛋，查询支付信息失败了(⊙︿⊙)");
     }

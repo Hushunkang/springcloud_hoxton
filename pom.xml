@@ -20,6 +20,7 @@
         <module>cloud-provider-payment8104</module>
         <module>cloud-consumer-order8105</module>
         <module>cloud-provider-payment8106</module>
+        <module>cloud-consumer-order8107</module>
     </modules>
 
     <!--定义jar包版本-->

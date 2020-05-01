@@ -24,7 +24,7 @@ public class PaymentController {
 
     @GetMapping(value = "consul")
     public String paymentConsul() {
-        return "spring boot with consul:" + serverPort + ":" +UUID.randomUUID().toString();
+        return "register center with consul:" + serverPort + ":" +UUID.randomUUID().toString();
     }
 
 }

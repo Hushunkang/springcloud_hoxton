@@ -24,7 +24,7 @@ public class PaymentController {
 
     @GetMapping(value = "zookeeper")
     public String paymentZookeeper() {
-        return "spring boot with zookeeper:" + serverPort + ":" +UUID.randomUUID().toString();
+        return "register center with zookeeper:" + serverPort + ":" +UUID.randomUUID().toString();
     }
 
 }
