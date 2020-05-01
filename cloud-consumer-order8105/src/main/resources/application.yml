@@ -1,0 +1,9 @@
+server:
+  port: 8105
+
+spring:
+  application:
+    name: cloud-consumer-order
+  cloud:
+    zookeeper:
+      connect-string: 45.77.99.153:2188 #将本微服务（我）注册到zookeeper服务端的具体地址（单节点zookeeper服务端）

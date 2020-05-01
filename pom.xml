@@ -18,6 +18,7 @@
         <module>cloud-eureka-server7003</module>
         <module>cloud-provider-payment8103</module>
         <module>cloud-provider-payment8104</module>
+        <module>cloud-consumer-order8105</module>
     </modules>
 
     <!--定义jar包版本-->
