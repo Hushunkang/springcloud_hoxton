@@ -10,13 +10,13 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>cloud-provider-payment8104</artifactId>
+    <artifactId>cloud-provider-payment8106</artifactId>
 
     <dependencies>
-        <!--zookeeper客户端-->
+        <!--consul客户端-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zookeeper-discovery</artifactId>
+            <artifactId>spring-cloud-starter-consul-discovery</artifactId>
         </dependency>
         <dependency><!--引入自定义的api通用包-->
             <groupId>com.atguigu</groupId>

@@ -13,7 +13,7 @@
     <artifactId>cloud-consumer-order8105</artifactId>
 
     <dependencies>
-        <!--spring boot整合zookeeper客户端-->
+        <!--zookeeper客户端-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-zookeeper-discovery</artifactId>
