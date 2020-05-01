@@ -3,21 +3,20 @@ package com.atguigu.springcloud;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
  * @author hskBeginner Email：2752962035@qq.com
  * @version 1.0
  * @description
- * @create 2020年04月28日
+ * @create 2020年04月30日
  */
 @SpringBootApplication
-@EnableEurekaClient//表示本微服务（我）就是要被注册到注册中心的微服务（微服务的提供者），即eureka客户端
 @EnableDiscoveryClient//服务（微服务的提供者）发现，对于注册到注册中心中的微服务的提供者，可以通过服务发现来获得它的信息
-public class PaymentApplication8101 {
+//EnableDiscoveryClient注解用于向使用nacos、consul、zookeeper作为注册中心的时候，提供服务发现功能
+public class PaymentApplication8104 {
 
     public static void main(String[] args) {
-        SpringApplication.run(PaymentApplication8101.class,args);
+        SpringApplication.run(PaymentApplication8104.class,args);
     }
 
 }

@@ -1,0 +1,9 @@
+server:
+  port: 8104
+
+spring:
+  application:
+    name: cloud-provider-payment
+  cloud:
+    zookeeper:
+      connect-string: 45.77.99.153:2188 #将本微服务（我）注册到zookeeper服务端的具体地址（单节点zookeeper服务端）
