@@ -42,7 +42,7 @@ public class PaymentController {
         if (payment != null) {
             return new CommonResult<>(200,"register center with eureka,serverPort:" + serverPort + "查询支付信息成功了(*￣︶￣)",payment);
         }
-        return new CommonResult<>(404,"完蛋，查询支付信息失败了(⊙︿⊙)");
+        return new CommonResult<>(444,"完蛋，查询支付信息失败了(⊙︿⊙)");
     }
 
 }
